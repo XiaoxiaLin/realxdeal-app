@@ -1,0 +1,7 @@
+
+task2.ipynb
+env.*
+.git
+.DS_Store
+.gitignore
+Dockerfile
