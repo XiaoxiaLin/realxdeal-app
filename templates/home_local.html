@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Serving Model">
+        <meta name="author" content="Xiaoxia">
+
+        <title>Realxdeal Task2</title>
+
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+      <!--Single Request Section -->
+      <section id="Single Request" class="single-request-section">
+
+            <h1>Single Request</h1>
+            <div class="container">
+                <p> Please enter a number to get the prediction from an univariate regression model that our data scientists built.</p>
+            </div>
+
+            <form action = "http://0.0.0.0:5000/single_prediction" method = "POST" enctype = "multipart/form-data">
+              <input type="number" name="x"  step=".01" placeholder="Enter a number">
+              <input type="submit" value="Get prediction">
+            </form>
+
+            <p>You can also get it directly from the url: <a href="http://0.0.0.0:5000/predict?x=0">http://0.0.0.0:5000/predict?x=0</a></p>
+            <p> Feel free to play around with a different value for x.</p>
+      </section>
+
+
+        <!-- Batch Request Section  -->
+        <section id="Batch Request" class="batch-request-section">
+            <h1>Batch Request</h1>
+            <div class="container">
+                Please upload a csv file with one column named 'x'.
+                For each value of x, you will get a prediction from an univariate regression model.
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section id="upload" class="upload-section">
+            <div class="container">
+                <h3>File Upload</h3>
+                    <form action = "http://0.0.0.0:5000/batch_prediction" method = "POST" enctype = "multipart/form-data">
+                        <label class="custom-file">
+                            <input type="file" id="file" name = "file" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+            </div>
+        </section>
+
+    </body>
+</html>

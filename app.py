@@ -25,7 +25,7 @@ logging.basicConfig(
 # HOME page that allow users to use single or batch prediction
 @app.route('/')
 def upload_page():
-    return render_template('home.html')
+    return render_template('home_heroku.html')
 
 
 def allowed_file(filename):
