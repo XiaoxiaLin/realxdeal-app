@@ -1,0 +1,7 @@
+.ipynb_checkpoints
+.DS_Store
+.dockerignore
+.git
+.ipynb_checkpoints
+__pycache__/
+*.log
